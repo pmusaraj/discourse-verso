@@ -1,1 +1,225 @@
 // Theme's SCSS
+
+:root {
+  --d-sidebar-section-border-color: transparent;
+  --d-sidebar-border-color: transparent;
+  --topic-list-item-background-color: transparent;
+  --topic-list-item-background-color--visited: transparent;
+  --table-border-color: transparent;
+  --d-content-background: transparent;
+
+  --d-border-radius: 6px;
+  --d-border-radius-large: 12px;
+  --d-table-border-top-height: 0px;
+
+  --shadow-header: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  --d-button-default-text-color: var(--primary);
+  --d-button-default-bg-color: var(--quaternary);
+  --d-button-default-icon-color: var(--primary-high);
+  --d-button-default-border: 1px solid var(--quaternary);
+  --d-button-default-border--hover: 1px solid var(--secondary-high);
+  --d-button-default-bg-color--hover: var(--quaternary);
+  --d-button-default-text-color--hover: var(--secondary-low);
+  --d-button-default-icon-color--hover: var(--secondary-low);
+  .d-combo-button.--has-menu .d-combo-button-button:hover {
+    border-right-color: unset;
+  }
+  .d-combo-button.--has-menu .d-combo-button-menu:hover {
+    border-left-color: unset;
+  }
+
+  --d-hover-text-color: var(--secondary);
+  --d-sidebar-active-color: var(--secondary);
+  --d-sidebar-highlight-background: var(--quaternary);
+  --d-sidebar-active-suffix-color: var(--quaternary);
+  --d-sidebar-link-icon-color: var(--primary-high);
+
+  --d-post-aside-border-left: 4px solid var(--secondary-high);
+  --d-post-aside-background: var(--secondary);
+
+  --d-chat-input-bg-color: var(--header_background);
+  --d-topic-list-header-background-color: var(--header_background);
+
+  --d-input-border: 1px solid var(--primary-200);
+  --input-border-color: var(--primary-200);
+
+  --d-unread-notification-background: var(--quaternary);
+  --title-color--read: var(--primary-very-high);
+  --topic-title-font-weight: 400;
+  --topic-title-font-weight--visited: 300;
+
+  // pending PR to core
+  --d-selected-text-color: var(--secondary);
+}
+
+.d-header {
+  --header_primary-low-mid: var(--primary-high);
+  --d-header-icon-color: var(--primary-high);
+}
+
+.search-menu .search-input,
+.search-menu-container .search-input,
+#reply-control,
+.topic-query-filter input.topic-query-filter__filter-term {
+  background-color: var(--header_background);
+}
+
+@mixin panel {
+  box-sizing: border-box;
+  background-color: var(--header_background);
+  border-radius: var(--d-border-radius-large);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-card);
+}
+
+.users-directory,
+.contents.body-page,
+.container .user-main,
+.container.tags-index,
+.container.badges,
+.container.show-badge,
+.container.group,
+.groups-header,
+.docs,
+.private_message,
+.archetype-regular #main-outlet > .regular, // Topics page
+ #upcoming-events-calendar,
+.reviewable-container,
+div.edit-category,
+.search-container,
+.tag-settings {
+  @include panel;
+}
+
+.list-controls {
+  @include panel;
+  padding-block-end: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.list-container {
+  @include panel;
+  padding-block-start: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#main-outlet {
+  padding-bottom: 3rem;
+}
+
+.discourse-tag.box {
+  background-color: var(--primary-100);
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.topic-list-item, tbody tr {
+  &:hover, &.selected {
+    background-color: rgb(var(--secondary-rgb), 0.5);
+  }
+}
+
+.list-controls,
+.groups-header {
+  background-color: rgb(var(--header_background-rgb), 0.6);
+
+}
+
+.navigation-container {
+  background-color: transparent;
+  --input-border-color: transparent;
+  --d-nav-border-color--active: transparent;
+
+  .combo-box .combo-box-header {
+    background-color: transparent;
+  }
+}
+
+.user-main .about .details,
+.user-main .about.collapsed-info .details {
+  background-color: transparent;
+}
+
+#list-area {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.more-topics__container {
+  margin-top: 2rem;
+}
+
+.groups-boxes .group-box {
+  @include panel;
+  padding: var(--space-2);
+}
+
+.pinned-options-btn__description, .notifications-tracking-btn__description {
+  --primary-medium: var(--primary-high);
+}
+
+.user-notifications-list {
+  --content-border-color: var(--header_background);
+}
+
+.admin-area .sidebar-wrapper .admin-panel {
+  --d-sidebar-highlight-background: var(--quaternary);
+}
+
+.sidebar-section-wrapper {
+  padding: 0.5rem 0;
+}
+
+.d-modal__container {
+  background-color: var(--header_background);
+}
+
+.sidebar-categories-form .sidebar-categories-form__row {
+  background-color: var(--secondary);
+}
+
+// TODO: select-kit overrides should be made easier from core
+.select-kit.combo-box .select-kit-header,
+.select-kit.multi-select .select-kit-header {
+  border-width: 1px;
+  border-color: var(--input-border-color);
+}
+
+body .select-kit .select-kit-row.is-selected .category-desc,
+body .select-kit .select-kit-row.is-selected .badge-category__wrapper .badge-category,
+body .select-kit.combo-box.category-chooser .select-kit-row.is-selected .topic-count,
+body .select-kit.combo-box.category-drop .select-kit-row.is-selected .topic-count,
+body .select-kit .period-chooser-row.is-selected .top-date-string {
+  color: var(--secondary);
+}
+
+// chat
+.chat-drawer .chat-drawer-container {
+  background-color: var(--header_background);
+  box-shadow: var(--shadow-card);
+}
+
+.chat-channel {
+  --d-hover: var(--secondary);
+}
+
+.chat-channel-row {
+  @media (hover: hover) {
+    &:hover,
+    &.active {
+      background: var(--secondary);
+    }
+  }
+}
+
+.full-page-chat {
+  --content-border-color: transparent;
+  background-color: var(--header_background);
+  box-shadow: var(--shadow-card);
+  // hack to get the box shadow to be on both sides of the box
+  margin-left: 5px;
+}

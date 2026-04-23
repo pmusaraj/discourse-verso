@@ -8,6 +8,36 @@
   "theme_version": "0.0.1",
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
+  "color_schemes": {
+    "VersoLight": {
+      "primary": "000000",
+      "secondary": "f9f7f6",
+      "tertiary": "222222",
+      "header_background": "FFFFFF",
+      "header_primary": "000000",
+      "quaternary": "EBE5E2",
+      "danger": "cf4335",
+      "success": "1ca551",
+      "love": "cf4335",
+      "hover": "f39390",
+      "highlight": "d04841",
+      "selected": "d04841"
+    },
+    "VersoDark": {
+      "primary": "e8e2de",
+      "secondary": "1c1917",
+      "tertiary": "d0c8c4",
+      "header_background": "111111",
+      "header_primary": "e8e2de",
+      "quaternary": "2e2926",
+      "danger": "d95a4b",
+      "success": "22b55a",
+      "love": "cf4335",
+      "hover": "4d1a17",
+      "highlight": "c84840",
+      "selected": "c84840"
+    }
+  },
   "assets": {},
   "modifiers": {}
 }
