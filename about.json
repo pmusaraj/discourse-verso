@@ -38,7 +38,7 @@
     }
   },
   "assets": {},
-  "screenshots": ["screenshots/screenshot.png", "screenshots/screenshot_dark.png"],
+  "screenshots": ["screenshots/light.png", "screenshots/dark.png"],
   "modifiers": {
     "only_theme_color_schemes": true
   },
