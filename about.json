@@ -9,7 +9,7 @@
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
   "color_schemes": {
-    "VersoLight": {
+    "verso-light": {
       "primary": "000000",
       "secondary": "f9f7f6",
       "tertiary": "222222",
@@ -23,7 +23,7 @@
       "highlight": "d04841",
       "selected": "d04841"
     },
-    "VersoDark": {
+    "verso-dark": {
       "primary": "e8e2de",
       "secondary": "1c1917",
       "tertiary": "d0c8c4",
@@ -39,5 +39,8 @@
     }
   },
   "assets": {},
-  "modifiers": {}
+  "modifiers": {},
+  "theme_site_settings": {
+    "enable_welcome_banner": true
+  }
 }
