@@ -1,5 +1,4 @@
 // Theme's SCSS
-
 :root {
   --d-sidebar-section-border-color: transparent;
   --d-sidebar-border-color: transparent;
@@ -7,14 +6,11 @@
   --topic-list-item-background-color--visited: transparent;
   --table-border-color: transparent;
   --d-content-background: transparent;
-
   --d-border-radius: 6px;
   --d-border-radius-large: 12px;
   --d-table-border-top-height: 0px;
-
-  --shadow-header: 0 2px 6px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.1);
-
+  --shadow-header: 0 2px 6px rgb(0, 0, 0, 0.05);
+  --shadow-card: 0 2px 6px rgb(0, 0, 0, 0.1);
   --d-button-default-text-color: var(--primary);
   --d-button-default-bg-color: var(--quaternary);
   --d-button-default-icon-color: var(--primary-high);
@@ -23,9 +19,11 @@
   --d-button-default-bg-color--hover: var(--quaternary);
   --d-button-default-text-color--hover: var(--secondary-low);
   --d-button-default-icon-color--hover: var(--secondary-low);
+
   .d-combo-button.--has-menu .d-combo-button-button:hover {
     border-right-color: unset;
   }
+
   .d-combo-button.--has-menu .d-combo-button-menu:hover {
     border-left-color: unset;
   }
@@ -35,16 +33,12 @@
   --d-sidebar-highlight-background: var(--quaternary);
   --d-sidebar-active-suffix-color: var(--quaternary);
   --d-sidebar-link-icon-color: var(--primary-high);
-
   --d-post-aside-border-left: 4px solid var(--secondary-high);
   --d-post-aside-background: var(--secondary);
-
   --d-chat-input-bg-color: var(--header_background);
   --d-topic-list-header-background-color: var(--header_background);
-
   --d-input-border: 1px solid var(--primary-200);
   --input-border-color: var(--primary-200);
-
   --d-unread-notification-background: var(--quaternary);
   --title-color--read: var(--primary-very-high);
   --topic-title-font-weight: 400;
@@ -132,6 +126,7 @@ tbody tr {
 
 .navigation-container {
   background-color: transparent;
+
   --input-border-color: transparent;
   --d-nav-border-color--active: transparent;
 
@@ -232,6 +227,7 @@ body .select-kit .period-chooser-row.is-selected .top-date-string {
   --content-border-color: transparent;
   background-color: var(--header_background);
   box-shadow: var(--shadow-card);
+
   // hack to get the box shadow to be on both sides of the box
   margin-left: 5px;
 }
