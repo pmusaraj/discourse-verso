@@ -39,7 +39,9 @@
     }
   },
   "assets": {},
-  "modifiers": {},
+  "modifiers": {
+    "only_theme_color_schemes": true
+  },
   "theme_site_settings": {
     "enable_welcome_banner": true
   }
