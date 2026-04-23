@@ -117,8 +117,10 @@ div.edit-category,
   padding-right: 4px;
 }
 
-.topic-list-item, tbody tr {
-  &:hover, &.selected {
+.topic-list-item,
+tbody tr {
+  &:hover,
+  &.selected {
     background-color: rgb(var(--secondary-rgb), 0.5);
   }
 }
@@ -126,7 +128,6 @@ div.edit-category,
 .list-controls,
 .groups-header {
   background-color: rgb(var(--header_background-rgb), 0.6);
-
 }
 
 .navigation-container {
@@ -158,7 +159,8 @@ div.edit-category,
   padding: var(--space-2);
 }
 
-.pinned-options-btn__description, .notifications-tracking-btn__description {
+.pinned-options-btn__description,
+.notifications-tracking-btn__description {
   --primary-medium: var(--primary-high);
 }
 
@@ -190,9 +192,19 @@ div.edit-category,
 }
 
 body .select-kit .select-kit-row.is-selected .category-desc,
-body .select-kit .select-kit-row.is-selected .badge-category__wrapper .badge-category,
-body .select-kit.combo-box.category-chooser .select-kit-row.is-selected .topic-count,
-body .select-kit.combo-box.category-drop .select-kit-row.is-selected .topic-count,
+body
+  .select-kit
+  .select-kit-row.is-selected
+  .badge-category__wrapper
+  .badge-category,
+body
+  .select-kit.combo-box.category-chooser
+  .select-kit-row.is-selected
+  .topic-count,
+body
+  .select-kit.combo-box.category-drop
+  .select-kit-row.is-selected
+  .topic-count,
 body .select-kit .period-chooser-row.is-selected .top-date-string {
   color: var(--secondary);
 }
