@@ -39,6 +39,7 @@
     }
   },
   "assets": {},
+  "screenshots": ["screenshots/screenshot.png", "screenshots/screenshot_dark.png"],
   "modifiers": {
     "only_theme_color_schemes": true
   },
