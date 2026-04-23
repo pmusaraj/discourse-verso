@@ -15,18 +15,12 @@
   --d-button-default-bg-color: var(--quaternary);
   --d-button-default-icon-color: var(--primary-high);
   --d-button-default-border: 1px solid var(--quaternary);
-  --d-button-default-border--hover: 1px solid var(--secondary-high);
-  --d-button-default-bg-color--hover: var(--quaternary);
-  --d-button-default-text-color--hover: var(--secondary-low);
-  --d-button-default-icon-color--hover: var(--secondary-low);
+  --d-button-default-border--hover: 1px solid var(--quaternary);
+  --d-button-default-bg-color--hover: var(--secondary-high);
+  --d-button-default-text-color--hover: var(--secondary);
+  --d-button-default-icon-color--hover: var(--secondary);
 
-  .d-combo-button.--has-menu .d-combo-button-button:hover {
-    border-right-color: unset;
-  }
-
-  .d-combo-button.--has-menu .d-combo-button-menu:hover {
-    border-left-color: unset;
-  }
+  --d-button-primary-bg-color--hover: var(--secondary-low);
 
   --d-hover-text-color: var(--secondary);
   --d-sidebar-active-color: var(--secondary);
@@ -43,8 +37,6 @@
   --title-color--read: var(--primary-very-high);
   --topic-title-font-weight: 400;
   --topic-title-font-weight--visited: 300;
-
-  // pending PR to core
   --d-selected-text-color: var(--secondary);
 }
 
@@ -168,12 +160,28 @@ tbody tr {
   --d-sidebar-admin-background: var(--secondary);
 }
 
+.d-modal__container {
+  background-color: var(--header_background);
+}
+
+// sidebar overrides
 .sidebar-section-wrapper {
   padding: 0.5rem 0;
 }
 
-.d-modal__container {
-  background-color: var(--header_background);
+.sidebar-footer-wrapper {
+  background: none;
+  position: absolute;
+
+  .sidebar-footer-container::before {
+    display: none;
+  }
+
+  .sidebar-footer-actions {
+    background-color: var(--secondary);
+    border-radius: 8px;
+    padding: 0.2rem;
+  }
 }
 
 .sidebar-categories-form .sidebar-categories-form__row {
