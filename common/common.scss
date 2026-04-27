@@ -1,4 +1,7 @@
 // Theme's SCSS
+
+@use "lib/viewport";
+
 :root {
   --d-sidebar-section-border-color: transparent;
   --d-sidebar-border-color: transparent;
@@ -52,12 +55,19 @@
   background-color: var(--header_background);
 }
 
+.category-list {
+  --content-border-color: transparent;
+}
+
 @mixin panel {
   box-sizing: border-box;
   background-color: var(--header_background);
   border-radius: var(--d-border-radius-large);
-  padding: var(--space-8);
   box-shadow: var(--shadow-card);
+  padding: var(--space-8);
+  @include viewport.until(md) {
+    padding: var(--space-5);
+  }
 }
 
 .users-directory,
@@ -240,4 +250,32 @@ body .select-kit .period-chooser-row.is-selected .top-date-string {
 
   // hack to get the box shadow to be on both sides of the box
   margin-left: 5px;
+}
+
+@include viewport.until(md) {
+  .topic-list .topic-list-data {
+    img.avatar {
+      width: 36px;
+      height: 36px;
+    }
+
+    .right {
+      margin-left: 48px;
+    }
+  }
+
+  .more-topics__container .more-topics__list-title,
+  .more-topics__container .more-topics__browse-more {
+    padding-left: 0;
+  }
+
+  .category-breadcrumb {
+    --nav-space: 0;
+    font-size: var(--font-down-1-rem);
+    flex-basis: 100%;
+
+    // correct button padding for better visual alignment
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
 }
