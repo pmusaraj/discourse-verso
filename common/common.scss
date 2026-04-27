@@ -271,10 +271,14 @@ body .select-kit .period-chooser-row.is-selected .top-date-string {
   .category-breadcrumb {
     --nav-space: 0;
     font-size: var(--font-down-1-rem);
-    flex-basis: 100%;
+    flex-basis: calc(100% + 1rem);
 
     // correct button padding for better visual alignment
     margin-left: -0.5rem;
     margin-right: -0.5rem;
+
+    > li {
+      margin-right: 0;
+    }
   }
 }
