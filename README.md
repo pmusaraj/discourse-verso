@@ -1,8 +1,8 @@
 # Verso
 
-Verso is a classic, editorial-inspired theme for [Discourse](https://www.discourse.org). It draws from print design traditions — clean typography, structured layouts, and a restrained color palette — to give your community a refined, timeless look.
+Verso is a classic, editorial-inspired theme for [Discourse](https://www.discourse.org).
 
-For more information, please see: **url to meta topic**
+For more information, please see: https://meta.discourse.org/t/verso-theme/401635
 
 ## Screenshots
 
